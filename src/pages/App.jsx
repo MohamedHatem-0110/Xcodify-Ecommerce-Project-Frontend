@@ -17,8 +17,7 @@ import CartPage from "./CartPage";
 import CheckoutPage from "./CheckoutPage";
 import OrderPage from "./OrderPage";
 
-axios.defaults.baseURL =
-  "https://xcodify-ecommerce-project-frontend.vercel.app";
+axios.defaults.baseURL = "https://xcodify-e-commerce-backend.vercel.app/";
 
 const App = () => {
   return (
