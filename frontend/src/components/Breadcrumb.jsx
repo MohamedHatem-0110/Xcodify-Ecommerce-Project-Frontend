@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useBreadcrumb } from "../providers/breadcrumbProvider";
 
@@ -18,11 +18,12 @@ function Breadcrumb() {
     ? [...paths.slice(0, paths.length - 1), breadcrumbs]
     : paths;
 
-  if (mergedBreadcrumbs[length - 2] == "products")
+  if (paths.includes("products"))
     mergedBreadcrumbs = mergedBreadcrumbs.slice(
       0,
       mergedBreadcrumbs.length - 1
     );
+  console.log(mergedBreadcrumbs);
 
   return (
     paths.length > 0 && (
