@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
 
 const LoadingSpinner = () => {
-  const [isVisible, setIsVisible] = useState(true);
+  // const [isVisible, setIsVisible] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(false);
-    }, 13000); // 5000 milliseconds = 5 seconds
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setIsVisible(false);
+  //   }, 13000); // 5000 milliseconds = 5 seconds
 
-    // Cleanup the timer if the component is unmounted before the timer completes
-    return () => clearTimeout(timer);
-  }, []);
+  //   // Cleanup the timer if the component is unmounted before the timer completes
+  //   return () => clearTimeout(timer);
+  // }, []);
 
-  if (!isVisible) {
-    return <h1 className="font-bold">Error. Please Refresh the Page</h1>;
-  }
+  // if (!isVisible) {
+  //   return <h1 className="font-bold">Error. Please Refresh the Page</h1>;
+  // }
   return (
     <div role="status" className="flex flex-col text-center items-center">
       <svg
